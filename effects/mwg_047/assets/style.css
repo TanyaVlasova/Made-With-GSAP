@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/* NORMALIZE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* NORMALIZE */
+
+body {
+  background: #121212;
+  color: #f1f1f1;
+}
+/* Optional: Remove horizontal scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+.mwg_effect047 {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+}
+.mwg_effect047 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.mwg_effect047 .header p {
+  font: 500 normal 7.6vw / normal "Inter", sans-serif;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: #eaebe0;
+}
+.mwg_effect047 .header img {
+  width: 5.4vw;
+  height: auto;
+}
+.mwg_effect047 .container {
+  display: flex;
+  width: max-content;
+}
+.mwg_effect047 .media {
+  width: 20vw;
+  height: auto;
+  position: relative;
+}
+.mwg_effect047 .container ul {
+  display: flex;
+  width: max-content;
+  align-items: flex-end;
+}
+.mwg_effect047 .container li {
+  list-style-type: none;
+}
+.mwg_effect047 .media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  object-fit: cover;
+  will-change: transform;
+}
+.mwg_effect047 #clone {
+  width: 100vw;
+}
+
+@media (hover: none) {
+  .mwg_effect047 {
+    overflow: hidden;
+  }
+  .mwg_effect047 .container ul {
+    display: none;
+  }
+}

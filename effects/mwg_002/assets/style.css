@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/* NORMALIZE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* NORMALIZE */
+
+body {
+  background: #121212;
+  color: #f1f1f1;
+  font: 500 normal 22px/1.3 "Inter", sans-serif;
+}
+.mwg_effect002 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.mwg_effect002 .card {
+  width: 20vw;
+  aspect-ratio: 0.8;
+  border-radius: 2%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mwg_effect002 .card .medias {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2, 1.2);
+}
+.mwg_effect002 .card .media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.mwg_effect002 .card .media.on {
+  visibility: visible;
+}
+.mwg_effect002 .text {
+  width: 20%;
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1vw;
+  letter-spacing: -0.01em;
+  padding: 25px 25px 0;
+}
+.mwg_effect002 .shop {
+  font-size: clamp(80px, 10vw, 200px);
+  letter-spacing: -0.03em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 80%;
+  text-align: center;
+  line-height: 0.95;
+}
+
+/* EFFECT KILLED ON MOBILE */
+@media (hover: none) {
+  .mwg_effect002 .card {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .mwg_effect002 .text {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 15px 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}

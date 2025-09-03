@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/* NORMALIZE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* NORMALIZE */
+
+body {
+  background: #121212;
+  color: #f1f1f1;
+}
+.mwg_effect038 .pin-height {
+  height: 300vh;
+  overflow: hidden;
+}
+.mwg_effect038 .container {
+  white-space: nowrap;
+  width: max-content;
+  height: 100vh;
+  display: flex;
+}
+.mwg_effect038 .project {
+  position: relative;
+  height: 100%;
+  min-width: 4vw;
+}
+.mwg_effect038 .project:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mwg_effect038 .project:not(.on) {
+  color: rgba(255, 255, 255, 0.3);
+}
+.mwg_effect038 .project:not(.on) .year,
+.mwg_effect038 .project:not(.on) .media {
+  display: none;
+}
+.mwg_effect038 .datas {
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  font: 500 normal 2vw / 2.6vw "Inter", sans-serif;
+  letter-spacing: -0.03em;
+  transform: rotate(-90deg);
+  transform-origin: 0 50%;
+  width: calc(100vh - 2.6vw);
+  display: flex;
+  justify-content: space-between;
+}
+.mwg_effect038 .media {
+  height: calc(100% - 2.6vw);
+  width: auto;
+  margin: 1.3vw 1.3vw 0 4vw;
+  object-fit: cover;
+  border-radius: 0.6vw;
+}
+
+@media (max-width: 768px) {
+  .mwg_effect038 .pin-height {
+    height: auto;
+  }
+
+  .mwg_effect038 .container {
+    height: auto;
+    white-space: initial;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .mwg_effect038 .project:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .mwg_effect038 .project {
+    border-right: 0 !important;
+  }
+
+  .mwg_effect038 .project:not(.on) {
+    color: #f1f1f1;
+  }
+  .mwg_effect038 .project:not(.on) .year,
+  .mwg_effect038 .project:not(.on) .media {
+    display: block;
+  }
+
+  .mwg_effect038 .datas {
+    position: relative;
+    transform: none;
+    left: auto;
+    margin: 30px 15px 15px;
+    font-size: 28px;
+    line-height: 30px;
+    width: auto;
+    display: block;
+  }
+  .mwg_effect038 .media {
+    margin: 15px;
+    width: calc(100% - 30px);
+    height: auto;
+    aspect-ratio: 1.8;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}

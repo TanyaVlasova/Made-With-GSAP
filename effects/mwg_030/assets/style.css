@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/* NORMALIZE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* NORMALIZE */
+
+body {
+  background: #121212;
+  color: #f1f1f1;
+}
+.mwg_effect030 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font: 400 normal 15px / normal "Inter", sans-serif;
+  letter-spacing: -0.03em;
+}
+.mwg_effect030 ul {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mwg_effect030 ul li {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 18px 25px;
+  cursor: pointer;
+}
+.mwg_effect030 ul li span:nth-child(1) {
+  width: 25%;
+}
+.mwg_effect030 ul li span:nth-child(3) {
+  text-align: right;
+  flex: 1;
+  visibility: hidden;
+}
+.mwg_effect030 ul li:hover span:nth-child(3) {
+  visibility: visible;
+}
+.mwg_effect030 .media-container {
+  position: absolute;
+  width: 24vw;
+  height: 24vw;
+  right: 16%;
+  top: 0;
+  border-radius: 2%;
+  pointer-events: none;
+  overflow: hidden;
+  visibility: hidden;
+}
+.mwg_effect030 .media-container.on {
+  visibility: visible;
+}
+.mwg_effect030 .media-container div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hides anything overflowing during the animation */
+  transform: translate(0, -100%); /* Starts above the mask */
+}
+.mwg_effect030 .media-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 90%); /* Starts almost completely below the parent */
+}
+.mwg_effect030 .medias img {
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .mwg_effect030 ul li span:nth-child(1) {
+    flex: 2;
+  }
+  .mwg_effect030 ul li span:nth-child(2) {
+    display: none;
+  }
+  .mwg_effect030 ul li span:nth-child(3) {
+    visibility: visible;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/* NORMALIZE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* NORMALIZE */
+
+body {
+  background: #121212;
+  color: #f1f1f1;
+}
+.mwg_effect017 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mwg_effect017 .container {
+  perspective: 300vh;
+  height: 94vh;
+  aspect-ratio: 1;
+  display: grid;
+  gap: 3vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+}
+.mwg_effect017 .media {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4%;
+}
+.mwg_effect017 .texts {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.mwg_effect017 .texts p {
+  font: 500 normal 2.8vw / 0.9 "Inter", sans-serif;
+  letter-spacing: -0.03em;
+  color: #f18f9f;
+}
+.mwg_effect017 .texts p:last-child {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .mwg_effect017 .texts p {
+    font-size: 26px;
+  }
+}
+@media (max-aspect-ratio: 1/1) {
+  .mwg_effect017 .texts {
+    top: 15px;
+    transform: none;
+  }
+  .mwg_effect017 .container {
+    height: auto;
+    width: calc(100% - 30px);
+    gap: 15px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
